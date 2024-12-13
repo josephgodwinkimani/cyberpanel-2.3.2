@@ -271,13 +271,9 @@ fi
 
 Pre_Upgrade_Setup_Git_URL() {
   if [[ $Server_Country != "CN" ]] ; then
-    Git_User="usmannasir"
-    Git_Content_URL="https://raw.githubusercontent.com/${Git_User}/cyberpanel"
-    Git_Clone_URL="https://github.com/${Git_User}/cyberpanel.git"
-  else
-    Git_User="qtwrk"
-    Git_Content_URL="https://gitee.com/${Git_User}/cyberpanel/raw"
-    Git_Clone_URL="https://gitee.com/${Git_User}/cyberpanel.git"
+    Git_User="josephgodwinkimani"
+    Git_Content_URL="https://raw.githubusercontent.com/${Git_User}/cyberpanel-2.3.2"
+    Git_Clone_URL="https://github.com/${Git_User}/cyberpanel-2.3.2.git"
   fi
 
   if [[ "$Debug" = "On" ]] ; then
@@ -539,13 +535,13 @@ fi
 wget "${Git_Content_URL}/${Branch_Name}/plogical/upgrade.py"
 
 if [[ "$Server_Country" = "CN" ]] ; then
-  sed -i 's|git clone https://github.com/usmannasir/cyberpanel|echo git cloned|g' upgrade.py
+  sed -i 's|git clone https://github.com/josephgodwinkimani/cyberpanel-2.3.2|echo git cloned|g' upgrade.py
 
   Retry_Command "git clone ${Git_Clone_URL}"
     Check_Return "git clone ${Git_Clone_URL}"
 
   # shellcheck disable=SC2086
-  sed -i 's|https://raw.githubusercontent.com/usmannasir/cyberpanel/stable/install/litespeed/httpd_config.xml|'${Git_Content_URL}/${Branch_Name}'//install/litespeed/httpd_config.xml|g' upgrade.py
+  sed -i 's|https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/stable/install/litespeed/httpd_config.xml|'${Git_Content_URL}/${Branch_Name}'//install/litespeed/httpd_config.xml|g' upgrade.py
   sed -i 's|https://cyberpanel.sh/composer.sh|https://gitee.com/qtwrk/cyberpanel/raw/stable/install/composer_cn.sh|g' upgrade.py
 fi
 
@@ -553,13 +549,9 @@ fi
 
 Pre_Upgrade_Setup_Git_URL() {
 if [[ $Server_Country != "CN" ]] ; then
-  Git_User="usmannasir"
-  Git_Content_URL="https://raw.githubusercontent.com/${Git_User}/cyberpanel"
-  Git_Clone_URL="https://github.com/${Git_User}/cyberpanel.git"
-else
-  Git_User="qtwrk"
-  Git_Content_URL="https://gitee.com/${Git_User}/cyberpanel/raw"
-  Git_Clone_URL="https://gitee.com/${Git_User}/cyberpanel.git"
+  Git_User="josephgodwinkimani"
+  Git_Content_URL="https://raw.githubusercontent.com/${Git_User}/cyberpanel-2.3.2"
+  Git_Clone_URL="https://github.com/${Git_User}/cyberpanel-2.3.2.git"
 fi
 
 if [[ "$Debug" = "On" ]] ; then
