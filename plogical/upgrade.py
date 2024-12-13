@@ -290,7 +290,7 @@ class Upgrade:
             except:
                 pass
 
-            command = 'wget -O /usr/local/CyberCP/public/phpmyadmin.zip https://github.com/josephgodwinkimani/cyberpanel-2.3.2/raw/stable/phpmyadmin.zip'
+            command = 'wget -O /usr/local/CyberCP/public/phpmyadmin.zip https://github.com/josephgodwinkimani/cyberpanel-2.3.2/raw/v2.3.2/phpmyadmin.zip'
             Upgrade.executioner(command, 0)
 
             command = 'unzip /usr/local/CyberCP/public/phpmyadmin.zip -d /usr/local/CyberCP/public/phpmyadmin'
@@ -2729,7 +2729,7 @@ vmail
             if os.path.exists('httpd_config.xml'):
                 os.remove('httpd_config.xml')
 
-            command = 'wget https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/stable/install/litespeed/httpd_config.xml'
+            command = 'wget https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/v2.3.2/install/litespeed/httpd_config.xml'
             Upgrade.executioner(command, command, 0)
             # os.remove('/usr/local/lsws/conf/httpd_config.xml')
             # shutil.copy('httpd_config.xml', '/usr/local/lsws/conf/httpd_config.xml')

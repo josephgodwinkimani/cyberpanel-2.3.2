@@ -34,14 +34,14 @@ Web Hosting Control Panel that uses OpenLiteSpeed as the underlying Web Server.
 
 
 ```
-sh <(curl https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/stable/install.sh || wget -O -  https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/stable/install.sh)
+sh <(curl https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/v2.3.2/install.sh || wget -O -  https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/v2.3.2/install.sh)
 ```
 
 # Upgrading CyberPanel
 
 
 ```
-sh <(curl https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/stable/preUpgrade.sh || wget -O - https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/stable/preUpgrade.sh)
+sh <(curl https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/v2.3.2/preUpgrade.sh || wget -O - https://raw.githubusercontent.com/josephgodwinkimani/cyberpanel-2.3.2/v2.3.2/preUpgrade.sh)
 ```
 
 # Resources
